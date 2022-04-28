@@ -1,0 +1,115 @@
+.grid {
+  border: 1px solid black;
+  height: 600px;
+  width: 550px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.grid div {
+  height: 50px;
+  width: 50px;
+}
+
+.power-stone {
+  background-image: url('../assets/powerStone.webp');
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+
+.space-stone {
+  background-image: url('../assets/spaceStone.webp');
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+
+.reality-stone {
+  background-image: url('../assets/realityStone.webp');
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+
+.soul-stone {
+  background-image: url('../assets/soulStone.webp');
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+
+.time-stone {
+  background-image: url('../assets/timeStone.webp');
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+
+.mind-stone {
+  background-image: url('../assets/mindStone.webp');
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+
+.thanos {
+  background-image: url('../assets/thanos.png');
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.iron-l1, .iron-l2 {
+  background-image: url('../assets/ironman.png');
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+/* .thanos-start {
+  background-image: url('../assets/thanos.png');
+  background-repeat: no-repeat;
+  background-size: contain;
+  cursor: pointer;
+} */
+
+/* * {
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  margin: 0;
+}
+
+
+.grid-wrapper {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.grid {
+  align-items: center;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-wrap: wrap;
+  height: 100%;
+  justify-content: center;
+  height: 600px;
+  width: 600px;
+}
+
+.grid div {
+  border: 1px solid lightgrey; */
+  /* flex-grow: 1; */
+  /* height: 10%;
+  width: 10%;
+}
+
+.thanos {
+  background-image: url('../assets/thanos.png');
+  background-repeat: no-repeat;
+  background-size: contain;
+  cursor: pointer;
+} */
