@@ -12,53 +12,7 @@
   width: 50px;
 }
 
-.power-stone {
-  background-image: url('../assets/powerStone.webp');
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-position: center;
-}
 
-.space-stone {
-  background-image: url('../assets/spaceStone.webp');
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-position: center;
-}
-
-.reality-stone {
-  background-image: url('../assets/realityStone.webp');
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-position: center;
-}
-
-.soul-stone {
-  background-image: url('../assets/soulStone.webp');
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-position: center;
-}
-
-.time-stone {
-  background-image: url('../assets/timeStone.webp');
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-position: center;
-}
-
-.mind-stone {
-  background-image: url('../assets/mindStone.webp');
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-position: center;
-}
-
-.thanos {
-  background-image: url('../assets/thanos.png');
-  background-repeat: no-repeat;
-  background-size: contain;
-}
 
 .l1, .l2 {
   background-image: url('../assets/ironman.png');
@@ -106,6 +60,72 @@
   background-image: url('../assets/miljoner.webp');
   background-repeat: no-repeat;
   background-size: contain;
+}
+
+.hawk-r1 {
+  background-image: url('../assets/hawkeye.png');
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.cap-l1, .cap-l2 {
+  background-image: url('../assets/captainAmericaShield.webp');
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.widow-r1 {
+  background-image: url('../assets/blackWidowWhite.png');
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.thanos {
+  background-image: url('../assets/thanos.png');
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.power-stone {
+  background-image: url('../assets/powerStone.webp');
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+
+.space-stone {
+  background-image: url('../assets/spaceStone.webp');
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+
+.reality-stone {
+  background-image: url('../assets/realityStone.webp');
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+
+.soul-stone {
+  background-image: url('../assets/soulStone.webp');
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+
+.time-stone {
+  background-image: url('../assets/timeStone.webp');
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+
+.mind-stone {
+  background-image: url('../assets/mindStone.webp');
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
 }
 
 /* .thanos-start {

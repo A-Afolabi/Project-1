@@ -6,6 +6,9 @@ const grid = document.querySelectorAll('.grid div')
 
 const heroesRight = document.querySelectorAll('.other-heroes-right')
 const thorLeft = document.querySelectorAll('.thor-left')
+const hawkeyeRight = document.querySelectorAll('.hawkeye-right')
+const capShieldLeft = document.querySelectorAll('.capShield-left')
+const blackWidowRight = document.querySelectorAll('.blackWidow-right')
 const ironmanLeft = document.querySelectorAll('.ironman-left')
 const hulkRight = document.querySelectorAll('.hulk-right')
 
@@ -53,6 +56,7 @@ function autoMove1() {
   ironmanLeft.forEach(ironmanLeft => moveIronmanLeft(ironmanLeft))
   heroesRight.forEach(heroesRight => moveHeroesRight(heroesRight))
   thorLeft.forEach(thorLeft => moveThorLeft(thorLeft))
+  capShieldLeft.forEach(capShieldLeft => moveCapShieldLeft(capShieldLeft))
 }
 
 function moveIronmanLeft(ironmanLeft) {
@@ -160,11 +164,69 @@ function moveThorLeft(thorLeft) {
   }
 }
 
+function autoMove3() {
+  hawkeyeRight.forEach(hawkeyeRight => moveHawkeyeRight(hawkeyeRight))
+}
 
+function moveHawkeyeRight(hawkeyeRight) {
+  if (hawkeyeRight.classList.contains('hawk-r4')) {
+    hawkeyeRight.classList.remove('hawk-r4')
+    hawkeyeRight.classList.add('hawk-r3')
+  } else if (hawkeyeRight.classList.contains('hawk-r3')) {
+    hawkeyeRight.classList.remove('hawk-r3')
+    hawkeyeRight.classList.add('hawk-r2')
+  } else if (hawkeyeRight.classList.contains('hawk-r2')) {
+    hawkeyeRight.classList.remove('hawk-r2')
+    hawkeyeRight.classList.add('hawk-r1')
+  } else if (hawkeyeRight.classList.contains('hawk-r1')) {
+    hawkeyeRight.classList.remove('hawk-r1')
+    hawkeyeRight.classList.add('hawk-r4')
+  } else {
+    console.log('NO HAWKEYE MOVEMENT')
+  }
+}
+setInterval(autoMove3, 1250)
 
+function moveCapShieldLeft(capShieldLeft) {
+  if (capShieldLeft.classList.contains('cap-l1')) {
+    capShieldLeft.classList.remove('cap-l1')
+    capShieldLeft.classList.add('cap-l2')
+  } else if (capShieldLeft.classList.contains('cap-l2')) {
+    capShieldLeft.classList.remove('cap-l2')
+    capShieldLeft.classList.add('cap-l3')
+  } else if (capShieldLeft.classList.contains('cap-l3')) {
+    capShieldLeft.classList.remove('cap-l3')
+    capShieldLeft.classList.add('cap-l1')
+  } else {
+    console.log('NO SHIELD MOVEMENT')
+  }
+}
 
+function autoMove4() {
+  blackWidowRight.forEach(blackWidowRight => moveBlackWidowRight(blackWidowRight))
+}
 
-
+function moveBlackWidowRight(blackWidowRight) {
+  if (blackWidowRight.classList.contains('widow-r5')) {
+    blackWidowRight.classList.remove('widow-r5')
+    blackWidowRight.classList.add('widow-r4')
+  } else if (blackWidowRight.classList.contains('widow-r4')) {
+    blackWidowRight.classList.remove('widow-r4')
+    blackWidowRight.classList.add('widow-r3')
+  } else if (blackWidowRight.classList.contains('widow-r3')) {
+    blackWidowRight.classList.remove('widow-r3')
+    blackWidowRight.classList.add('widow-r2')
+  } else if (blackWidowRight.classList.contains('widow-r2')) {
+    blackWidowRight.classList.remove('widow-r2')
+    blackWidowRight.classList.add('widow-r1')
+  } else if (blackWidowRight.classList.contains('widow-r1')) {
+    blackWidowRight.classList.remove('widow-r1')
+    blackWidowRight.classList.add('widow-r5')
+  } else {
+    console.log('NO BLACK-WIDOW MOVEMENT')
+  }
+}
+setInterval(autoMove4, 750)
 
 // function init() {
 
