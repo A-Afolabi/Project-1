@@ -4,7 +4,12 @@ const start = document.querySelector('#start-button')
 
 const grid = document.querySelectorAll('.grid div')
 
+const heroesRight = document.querySelectorAll('.other-heroes-right')
+const thorLeft = document.querySelectorAll('.thor-left')
 const ironmanLeft = document.querySelectorAll('.ironman-left')
+const hulkRight = document.querySelectorAll('.hulk-right')
+
+
 const thanosStartPosition = 115
 let thanosCurrentPosition = 115
 const width = 11
@@ -44,28 +49,121 @@ function moveThanos(e) {
 }
 document.addEventListener('keydown', moveThanos)
 
-function autoIronman() {
+function autoMove1() {
   ironmanLeft.forEach(ironmanLeft => moveIronmanLeft(ironmanLeft))
+  heroesRight.forEach(heroesRight => moveHeroesRight(heroesRight))
+  thorLeft.forEach(thorLeft => moveThorLeft(thorLeft))
 }
 
 function moveIronmanLeft(ironmanLeft) {
-  if (ironmanLeft === 'iron-l1') {
-    ironmanLeft.remove('iron-l1')
-    ironmanLeft.add('iron-l2')
-  } else if (ironmanLeft === 'iron-l2') {
-    ironmanLeft.remove('iron-l2')
-    ironmanLeft.add('iron-l3')
-  } else if (ironmanLeft === 'iron-l3') {
-    ironmanLeft.remove('iron-l3')
-    ironmanLeft.add('iron-l4')
-  } else if (ironmanLeft === 'iron-l4') {
-    ironmanLeft.remove('iron-l4')
-    ironmanLeft.add('iron-l1')
+  if (ironmanLeft.classList.contains('l1')) {
+    ironmanLeft.classList.remove('l1')
+    ironmanLeft.classList.add('l2')
+  } else if (ironmanLeft.classList.contains('l2')) {
+    ironmanLeft.classList.remove('l2')
+    ironmanLeft.classList.add('l3')
+  } else if (ironmanLeft.classList.contains('l3')) {
+    ironmanLeft.classList.remove('l3')
+    ironmanLeft.classList.add('l4')
+  } else if (ironmanLeft.classList.contains('l4')) {
+    ironmanLeft.classList.remove('l4')
+    ironmanLeft.classList.add('l1')
   } else {
-    console.log('NO MOVEMENT')
+    console.log('NO IRONMAN MOVEMENT')
+  }
+
+  // Alternative to use, but I manageged to get the if statement working.
+
+  // switch (true) {
+  //   case ironmanLeft.classList.contains('l1'):
+  //     ironmanLeft.classList.remove('l1')
+  //     ironmanLeft.classList.add('l2')
+  //     break
+  //   case ironmanLeft.classList.contains('l2'):
+  //     ironmanLeft.classList.remove('l2')
+  //     ironmanLeft.classList.add('l3')
+  //     break
+  //   case ironmanLeft.classList.contains('l3'):
+  //     ironmanLeft.classList.remove('l3')
+  //     ironmanLeft.classList.add('l4')
+  //     break
+  //   case ironmanLeft.classList.contains('l4'):
+  //     ironmanLeft.classList.remove('l4')
+  //     ironmanLeft.classList.add('l1')
+  //     break
+  // }
+}
+setInterval(autoMove1, 1000)
+
+function autoHulk() {
+  hulkRight.forEach(hulkRight => moveHulkRight(hulkRight))
+}
+
+function moveHulkRight(hulkRight) {
+  if (hulkRight.classList.contains('hulk-r3')) {
+    hulkRight.classList.remove('hulk-r3')
+    hulkRight.classList.add('hulk-r2')
+  } else if (hulkRight.classList.contains('hulk-r2')) {
+    hulkRight.classList.remove('hulk-r2')
+    hulkRight.classList.add('hulk-r1')
+  } else if (hulkRight.classList.contains('hulk-r1')) {
+    hulkRight.classList.remove('hulk-r1')
+    hulkRight.classList.add('hulk-r3')
+  } else {
+    console.log('NO HULK MOVEMENT')
   }
 }
-//setInterval(autoIronman, 1000)
+setInterval(autoHulk, 750)
+
+function moveHeroesRight(heroesRight) {
+  if (heroesRight.classList.contains('r6')) {
+    heroesRight.classList.remove('r6')
+    heroesRight.classList.add('r5')
+  } else if (heroesRight.classList.contains('r5')) {
+    heroesRight.classList.remove('r5')
+    heroesRight.classList.add('r4')
+  } else if (heroesRight.classList.contains('r4')) {
+    heroesRight.classList.remove('r4')
+    heroesRight.classList.add('r3')
+  } else if (heroesRight.classList.contains('r3')) {
+    heroesRight.classList.remove('r3')
+    heroesRight.classList.add('r2')
+  } else if (heroesRight.classList.contains('r2')) {
+    heroesRight.classList.remove('r2')
+    heroesRight.classList.add('r1')
+  } else if (heroesRight.classList.contains('r1')) {
+    heroesRight.classList.remove('r1')
+    heroesRight.classList.add('r6')
+  } else {
+    console.log('NO HEROES MOVEMENT')
+  }
+}
+
+function moveThorLeft(thorLeft) {
+  if (thorLeft.classList.contains('thor-l1')) {
+    thorLeft.classList.remove('thor-l1')
+    thorLeft.classList.add('thor-l2')
+  } else if (thorLeft.classList.contains('thor-l2')) {
+    thorLeft.classList.remove('thor-l2')
+    thorLeft.classList.add('thor-l3')
+  } else if (thorLeft.classList.contains('thor-l3')) {
+    thorLeft.classList.remove('thor-l3')
+    thorLeft.classList.add('thor-l4')
+  } else if (thorLeft.classList.contains('thor-l4')) {
+    thorLeft.classList.remove('thor-l4')
+    thorLeft.classList.add('thor-l5')
+  } else if (thorLeft.classList.contains('thor-l5')) {
+    thorLeft.classList.remove('thor-l5')
+    thorLeft.classList.add('thor-l1')
+  } else {
+    console.log('NO THOR MOVEMENT')
+  }
+}
+
+
+
+
+
 
 
 // function init() {

@@ -4,6 +4,7 @@
   width: 550px;
   display: flex;
   flex-wrap: wrap;
+  background-color: burlywood;
 }
 
 .grid div {
@@ -59,8 +60,50 @@
   background-size: contain;
 }
 
-.iron-l1, .iron-l2 {
+.l1, .l2 {
   background-image: url('../assets/ironman.png');
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.hulk-r1 {
+  background-image: url('../assets/hulk.webp');
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.r1 {
+  background-image: url('../assets/blackPanther.png');
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.r2 {
+  background-image: url('../assets/drStrange.png');
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.r3 {
+  background-image: url('../assets/spiderman.png');
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.r4 {
+  background-image: url('../assets/starLord.png');
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.thor-l1, .thor-l3 {
+  background-image: url('../assets/thor.png');
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.thor-l2 {
+  background-image: url('../assets/miljoner.webp');
   background-repeat: no-repeat;
   background-size: contain;
 }
