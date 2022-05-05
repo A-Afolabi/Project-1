@@ -12,8 +12,6 @@
   width: 50px;
 }
 
-
-
 .l1, .l2 {
   background-image: url('../assets/ironman.png');
   background-repeat: no-repeat;
@@ -123,6 +121,13 @@
 
 .mind-stone {
   background-image: url('../assets/mindStone.webp');
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+
+.infinityGauntletSnap {
+  background-image: url('../assets/infinityGauntletSnap.png');
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center;

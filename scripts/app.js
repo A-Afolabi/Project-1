@@ -1,5 +1,6 @@
 const timeRemaining = document.querySelector('#time-left')
 const score = document.querySelector('#score')
+// const lives = document.querySelector('#lives')
 const start = document.querySelector('#start-button')
 
 const grid = document.querySelectorAll('.grid div')
@@ -13,11 +14,14 @@ const ironmanLeft = document.querySelectorAll('.ironman-left')
 const hulkRight = document.querySelectorAll('.hulk-right')
 
 
-const thanosStartPosition = 115
+//const thanosStartPosition = 115
 let thanosCurrentPosition = 115
 const width = 11
+let timer
+let currentTime = 20
+
 function moveThanos(e) {
-  console.log(e)
+  //console.log(e)
   grid[thanosCurrentPosition].classList.remove('thanos')
 
   const right = 39
@@ -50,9 +54,10 @@ function moveThanos(e) {
 
   grid[thanosCurrentPosition].classList.add('thanos')
 }
-document.addEventListener('keydown', moveThanos)
 
 function autoMove1() {
+  currentTime--
+  timeRemaining.textContent = currentTime
   ironmanLeft.forEach(ironmanLeft => moveIronmanLeft(ironmanLeft))
   heroesRight.forEach(heroesRight => moveHeroesRight(heroesRight))
   thorLeft.forEach(thorLeft => moveThorLeft(thorLeft))
@@ -97,10 +102,11 @@ function moveIronmanLeft(ironmanLeft) {
   //     break
   // }
 }
-setInterval(autoMove1, 1000)
 
-function autoHulk() {
+
+function autoMove2() {
   hulkRight.forEach(hulkRight => moveHulkRight(hulkRight))
+  blackWidowRight.forEach(blackWidowRight => moveBlackWidowRight(blackWidowRight))
 }
 
 function moveHulkRight(hulkRight) {
@@ -117,7 +123,7 @@ function moveHulkRight(hulkRight) {
     console.log('NO HULK MOVEMENT')
   }
 }
-setInterval(autoHulk, 750)
+
 
 function moveHeroesRight(heroesRight) {
   if (heroesRight.classList.contains('r6')) {
@@ -185,7 +191,7 @@ function moveHawkeyeRight(hawkeyeRight) {
     console.log('NO HAWKEYE MOVEMENT')
   }
 }
-setInterval(autoMove3, 1250)
+
 
 function moveCapShieldLeft(capShieldLeft) {
   if (capShieldLeft.classList.contains('cap-l1')) {
@@ -200,10 +206,6 @@ function moveCapShieldLeft(capShieldLeft) {
   } else {
     console.log('NO SHIELD MOVEMENT')
   }
-}
-
-function autoMove4() {
-  blackWidowRight.forEach(blackWidowRight => moveBlackWidowRight(blackWidowRight))
 }
 
 function moveBlackWidowRight(blackWidowRight) {
@@ -226,7 +228,65 @@ function moveBlackWidowRight(blackWidowRight) {
     console.log('NO BLACK-WIDOW MOVEMENT')
   }
 }
-setInterval(autoMove4, 750)
+
+function aliveChecker() {
+  dies()
+  stoneReached()
+}
+
+setInterval(aliveChecker)
+
+function dies() {
+  if (grid[thanosCurrentPosition].classList.contains('l1') ||
+    grid[thanosCurrentPosition].classList.contains('l2') ||
+    grid[thanosCurrentPosition].classList.contains('hulk-r1') ||
+    grid[thanosCurrentPosition].classList.contains('r1') ||
+    grid[thanosCurrentPosition].classList.contains('r2') ||
+    grid[thanosCurrentPosition].classList.contains('r3') ||
+    grid[thanosCurrentPosition].classList.contains('r4') ||
+    grid[thanosCurrentPosition].classList.contains('thor-l1') ||
+    grid[thanosCurrentPosition].classList.contains('thor-l2') ||
+    grid[thanosCurrentPosition].classList.contains('thor-l3') ||
+    grid[thanosCurrentPosition].classList.contains('hawk-r1') ||
+    grid[thanosCurrentPosition].classList.contains('cap-l1') ||
+    grid[thanosCurrentPosition].classList.contains('cap-l2') ||
+    grid[thanosCurrentPosition].classList.contains('widow-r1') ||
+    currentTime <= 0) {
+    score.textContent = 'I Know What It Is Like To Lose, To Feel So Desperately That You Are Right But To Fail Nonetheless'
+    clearInterval(timer)
+    grid[thanosCurrentPosition].classList.remove('thanos')
+    document.removeEventListener('keydown', moveThanos)
+  }
+}
+
+function stoneReached() {
+  if (grid[thanosCurrentPosition].classList.contains('power-stone') ||
+    grid[thanosCurrentPosition].classList.contains('space-stone') ||
+    grid[thanosCurrentPosition].classList.contains('reality-stone') ||
+    grid[thanosCurrentPosition].classList.contains('soul-stone') ||
+    grid[thanosCurrentPosition].classList.contains('time-stone') ||
+    grid[thanosCurrentPosition].classList.contains('mind-stone')) {
+    score.textContent = 'I AM INEVITABLE!!!'
+    clearInterval(timer)
+    grid[thanosCurrentPosition].classList.remove('thanos')
+    grid[thanosCurrentPosition].classList.add('infinityGauntletSnap')
+    document.removeEventListener('keydown', moveThanos)
+  }
+}
+
+start.addEventListener('click', () => {
+  if (timer) {
+    clearInterval(timer)
+    timer = null
+    document.removeEventListener('keydown', moveThanos)
+  } else {
+    timer = setInterval(autoMove1, 1000)
+    setInterval(autoMove2, 750)
+    setInterval(autoMove3, 1250)
+    document.addEventListener('keydown', moveThanos)
+  }
+})
+
 
 // function init() {
 
