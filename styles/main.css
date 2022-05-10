@@ -1,10 +1,67 @@
+body {
+  background-image: url(../assets/avengersBK3.webp);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-position-y:initial;
+}
+
+.container {
+  margin: auto;
+}
+
+h1 {
+  text-align: center;
+  font-family: 'Marvel', sans-serif;
+  font-style: italic;
+  font-size: 50px;
+  color: burlywood;
+}
+
+h4 {
+  margin: 0 10%;
+    padding: 3% 0 3% 0;
+    line-height: 1cm;
+    font-size: 25px;
+    text-align: center;
+    font-style: italic;
+    font-family: 'Marvel', sans-serif;
+    color: aqua;
+}
+
+#start{
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  padding-top: 1%;
+}
+
+#start-button {
+  padding: 15px;
+  margin: center;
+  color: aqua;
+  background-color: transparent;
+  border-radius: 15px;
+}
+
+#time-left {
+  padding-top: 10px;
+  text-align: center;
+  font-family: 'Marvel', sans-serif;
+  font-style: italic;
+  font-size: 50px;
+  color: burlywood;
+}
+
 .grid {
-  border: 1px solid black;
+  border: 5px solid whitesmoke;
+  border-radius: 10px;
   height: 600px;
   width: 550px;
   display: flex;
   flex-wrap: wrap;
   background-color: burlywood;
+  margin: auto;
 }
 
 .grid div {
@@ -19,7 +76,7 @@
 }
 
 .hulk-r1 {
-  background-image: url('../assets/hulk.webp');
+  background-image: url('../assets/hulk.png');
   background-repeat: no-repeat;
   background-size: contain;
 }
@@ -48,20 +105,14 @@
   background-size: contain;
 }
 
-.thor-l1, .thor-l3 {
+.thor-l1, .thor-l2, .thor-l3 {
   background-image: url('../assets/thor.png');
   background-repeat: no-repeat;
   background-size: contain;
 }
 
-.thor-l2 {
-  background-image: url('../assets/miljoner.webp');
-  background-repeat: no-repeat;
-  background-size: contain;
-}
-
 .hawk-r1 {
-  background-image: url('../assets/hawkeye.png');
+  background-image: url('../assets/hawkeye2.png');
   background-repeat: no-repeat;
   background-size: contain;
 }
@@ -133,51 +184,3 @@
   background-position: center;
 }
 
-/* .thanos-start {
-  background-image: url('../assets/thanos.png');
-  background-repeat: no-repeat;
-  background-size: contain;
-  cursor: pointer;
-} */
-
-/* * {
-  box-sizing: border-box;
-}
-
-body {
-  height: 100vh;
-  margin: 0;
-}
-
-
-.grid-wrapper {
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.grid {
-  align-items: center;
-  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2);
-  display: flex;
-  flex-wrap: wrap;
-  height: 100%;
-  justify-content: center;
-  height: 600px;
-  width: 600px;
-}
-
-.grid div {
-  border: 1px solid lightgrey; */
-  /* flex-grow: 1; */
-  /* height: 10%;
-  width: 10%;
-}
-
-.thanos {
-  background-image: url('../assets/thanos.png');
-  background-repeat: no-repeat;
-  background-size: contain;
-  cursor: pointer;
-} */
