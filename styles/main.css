@@ -29,7 +29,7 @@ h4 {
     color: aqua;
 }
 
-#start{
+#buttons{
   border-radius: 5px;
   display: flex;
   justify-content: center;
@@ -60,7 +60,10 @@ h4 {
   width: 550px;
   display: flex;
   flex-wrap: wrap;
-  background-color: burlywood;
+  background-image: url(../assets/titanBK2.webp);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
   margin: auto;
 }
 
@@ -100,7 +103,7 @@ h4 {
 }
 
 .r4 {
-  background-image: url('../assets/starLord.png');
+  background-image: url('../assets/wanda.png');
   background-repeat: no-repeat;
   background-size: contain;
 }
@@ -112,7 +115,7 @@ h4 {
 }
 
 .hawk-r1 {
-  background-image: url('../assets/hawkeye2.png');
+  background-image: url('../assets/hawkeye.png');
   background-repeat: no-repeat;
   background-size: contain;
 }
